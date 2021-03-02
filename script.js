@@ -11,3 +11,9 @@ function initModal(idDivModal) {
 const buttonCreateForm = document.querySelector('.btn-CreateForm');
 buttonCreateForm.addEventListener('click', () => initModal('modal-menu'));
 
+document.querySelector('form')
+.addEventListener('submit', event =>{
+  console.log('enviar o formulário')
+
+  // event.preventDefault();
+})

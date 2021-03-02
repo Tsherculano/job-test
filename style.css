@@ -1,80 +1,7 @@
-.logo {
-    width:95px;
-    height:65px;
-}
-
-.modal-container {
-    width: 100vw; 
-    height: 100vh;
-    background: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    display: none;
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-container.show {
-    display: flex;
-}
-
-.modal {
-    position: relative;
-
-}
-
-@keyframes modal {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -60px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.show .modal {
-    animation: modal .3s;
-}
-
-.btn-close {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 45px;
-    height: 30px;
-    border-radius: 40%;
-    border: 2px solid white;
-    background: #130f0d;
-    color: #fd951f;
-    cursor: pointer;
-    box-shadow: 0 4px 4px 0px rgba(0,0,0, .3) ;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-h3 {
-    text-align: center;
-}
-.show-forms-done {
-    border-top: 1px solid black;
-}
-
-.btn-container {
-    display:flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-/* Configurations style general */
 :root {
-    --primary-color: #fd951f;
-    --bg-color: #130f0d;
-    --text-color: #f0f0f5;
+    --primary-color: purple;
+    --bg-color: white;
+    --text-color: black;
     --light-color: rgba(255, 255, 255, 0.04);
 }
 
@@ -89,13 +16,26 @@ html {
     height: 100%;
 }
 
+h2 {
+    text-align: center;
+    color: black;
+    margin-top: 25px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 45px;
+    color:purple;
+
+}
+
 body {
     height: 100vh;
 
     display: flex;
     flex-direction: column;
 
-    background-color: #130f0d;
+    background-color: white;
     color: #f0f0f5;
 }
 
@@ -103,7 +43,7 @@ form {
     background: rgba(255, 255, 255, 0.03);
 
     width: 100%;
-    max-width: 500px;
+    max-width: 900px;
 
     margin: 32px auto;
     padding: 32px 64px;
@@ -112,6 +52,14 @@ form {
     flex-direction: column;
 }
 
+/* form h2 {
+    margin-bottom: 32px;
+} */
+
+div.input {
+    margin-bottom: 24px;
+    position: relative;
+}
 
 input,
 button {
@@ -124,6 +72,7 @@ button {
     width: 100%;
 
     padding: 16px 0;
+    
 
     border:none;
     border-bottom: 1px solid var(--primary-color);
@@ -152,6 +101,79 @@ input ~ label {
 
     transition: .4s;
 }
+
+input:focus ~ label,
+input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+
+
+
+/* INIT ==> Modal configuration */
+.modal-container {
+    display: none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    width: 900px;
+
+}
+/* FINISH ==> Modal configuration */
+
+
+/* INIT ==> Animation after submit click button */
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.show .modal {
+    animation: modal .3s;
+}
+/* FINISH ==> Animation after submit click button */
+
+
+/* INIT ==> button configuration */
+.btn-close {
+    position: absolute;
+    top: 90px;
+    right: 40px;
+    width: 45px;
+    height: 30px;
+    border-radius: 40%;
+    border: 2px solid white;
+    background: white;
+    color: purple;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0px rgba(0,0,0, .3) ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* FINISH ==> button configuration */
+
+:placeholder-shown {
+    text-align: center;
+}
+
+
+
 
 
 
