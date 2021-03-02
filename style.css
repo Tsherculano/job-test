@@ -21,12 +21,6 @@
 }
 
 .modal {
-    background:white;
-    width: 60%;
-    min-width: 250px;
-    padding: 15px;
-    border: 3px solid rgb(0, 41, 128);;
-    box-shadow: 0 0 0 2px white;
     position: relative;
 
 }
@@ -48,16 +42,19 @@
 
 .btn-close {
     position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    top: 50px;
+    right: 50px;
+    width: 45px;
+    height: 30px;
+    border-radius: 40%;
     border: 2px solid white;
-    background: rgb(0, 41, 128);
-    color: white;
+    background: #130f0d;
+    color: #fd951f;
     cursor: pointer;
     box-shadow: 0 4px 4px 0px rgba(0,0,0, .3) ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 h3 {
@@ -73,4 +70,91 @@ h3 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+/* Configurations style general */
+:root {
+    --primary-color: #fd951f;
+    --bg-color: #130f0d;
+    --text-color: #f0f0f5;
+    --light-color: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #130f0d;
+    color: #f0f0f5;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.03);
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 32px auto;
+    padding: 32px 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+input,
+button {
+    /* reset appeareance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* box */
+    width: 100%;
+
+    padding: 16px 0;
+
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: transparent;
+
+    outline: none;
+
+    /* text */
+    color: var(--text-color);
+    font-size: 1em;
+
+}
+
+button {
+    margin-top: 16px;
+    background-color: var(--primary-color);
+}
+
+input ~ label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.6) ;
+
+    transition: .4s;
+}
+
+
+
+
+
 
